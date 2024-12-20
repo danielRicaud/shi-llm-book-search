@@ -68,10 +68,8 @@ npm install
 4. Start the server:
 
 ```bash
-npm start
+npm run dev
 ```
-
-5. Open your web browser and navigate to `http://localhost:3000` to use the application.
 
 ## Usage
 
