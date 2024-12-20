@@ -97,7 +97,6 @@ def process_with_llm(books: List[Book]) -> List[dict]:
 @app.post("/search")
 async def search_books(query: str):
     try:
-        print(f"Searching for books with query: {query}")
         books = fetch_books_from_openlibrary(query)
         processed_results = process_with_llm(books)
         return {"results": processed_results}

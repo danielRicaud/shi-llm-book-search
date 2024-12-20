@@ -16,7 +16,7 @@ const App: React.FC = () => {
       setResults(response.data.results);
     } catch (error) {
       console.error('Error fetching data:', error);
-      alert('Failed to fetch data. Please try again later.');
+      alert('Please retry query, high server load.');
     } finally {
       setLoading(false);
     }
