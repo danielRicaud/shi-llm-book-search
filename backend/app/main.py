@@ -52,11 +52,8 @@ def fetch_books_from_openlibrary(query: str) -> List[Book]:
     for doc in data.get("docs", []):
         title = doc.get("title", "Unknown Title")
         author = ", ".join(doc.get("author_name", ["Unknown Author"]))
-        # if doc has "first_sentence apply it to description, else use "No description available"
         description = doc.get("first_sentence", {})[0] if doc.get(
             "first_sentence", {}) else "No description available"
-        # description = doc.get("first_sentence", {})[0] if doc.get(
-        #     "first_sentence", {}) else "No description available"
         books.append(Book(title, author, description))
 
     return books[:MAX_BOOKS]
