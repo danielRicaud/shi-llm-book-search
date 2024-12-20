@@ -48,7 +48,6 @@ def fetch_books_from_openlibrary(query: str) -> List[Book]:
 
     data = response.json()
     data = json.loads(json.dumps(data))
-    print(data)
     books = []
     for doc in data.get("docs", []):
         title = doc.get("title", "Unknown Title")
@@ -82,7 +81,6 @@ def process_with_llm(books: List[Book]) -> List[dict]:
             prompt=prompt,
             max_tokens=500,
         )
-        print(f"LLM response: {response}")
         summaries = response.choices[0].text.strip().split("\n")
         return [
             {"title": books[i].title, "author": books[i].author,
