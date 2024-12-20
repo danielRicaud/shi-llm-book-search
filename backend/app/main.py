@@ -75,7 +75,6 @@ def process_with_llm(books: List[Book]) -> List[dict]:
     )
 
     try:
-        print(f"Processing with LLM: {prompt}")
         response = openai.Completion.create(
             engine="gpt-3.5-turbo-instruct",
             prompt=prompt,
