@@ -2,6 +2,8 @@
 
 A web interface and server that allows a user to query books from Open Library, results are pre-processed through openai
 
+A public version of the UI can be accessed here: [Github Pages UI](https://danielricaud.github.io/shi-llm-book-search/)
+
 ## Architecture
 
 The architecture of the `shi-llm-book-search` project is based on a client-server model. The main components involved are:
